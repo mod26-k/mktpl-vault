@@ -21,11 +21,11 @@
   --text-dark: #615954;
 }
 
-/* *,
+*,
 *:before,
 *:after {
   box-sizing: border-box;
-} */
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Aldrich';
@@ -97,10 +97,10 @@ body {
   font-size: 2vmin;
 } */
 
-/* .form-container {
+.form-container {
   padding: 3vmin;
-  background-color: var(--grey);
-  border: .1vmin solid var(--grey);
+  background-color: var(--blue);
+  border: .1vmin solid var(--blue);
   border-radius: 1vmin;
 }
 
@@ -114,7 +114,7 @@ form {
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
   color: var(--text-light);
-} */
+}
 
 label {
   font-size: 2vmin;
@@ -122,35 +122,35 @@ label {
   align-items: center;
 }
 
-/* input {
+input {
   padding: 1vmin;
   font-size: 2vmin;
   border: .1vmin solid var(--grey);
   border-radius: .5vmin;
   color: var(--text-dark);
-  background-image: none !important; */
+  background-image: none !important;
   /* prevent lastpass */
-  /* outline: none; */
-/* } */
+  outline: none;
+}
 
-/* input:focus {
+input:focus {
   border-color: var(--grey);
-} */
+}
 
 button,
 a.button {
-  /* margin: 1vmin;
-  padding: 1vmin; */
+  margin: 1vmin;
+  padding: 1vmin;
   color: var(--white);
   background-color: var(--blue) !important;
-  /* font-size: 2vmin;
+  font-size: 2vmin;
   font-weight: bold;
-  text-decoration: none; */
+  text-decoration: none;
   text-align: center;
   border: .1vmin solid var(--blue);
-  /* border-radius: .5vmin;
+  border-radius: .5vmin;
   outline: none;
-  cursor: pointer; */
+  cursor: pointer;
 }
 
 /* button.btn-sm {
@@ -161,7 +161,7 @@ a.button {
 button.btn-xs {
   font-size: 1vmin;
   padding: .4vmin .5vmin;
-}
+} */
 
 button:disabled,
 form:invalid button[type="submit"] {
@@ -172,4 +172,4 @@ form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
-} */
+}
