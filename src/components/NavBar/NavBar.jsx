@@ -1,6 +1,8 @@
 import React from 'react'
+import './NavBar.css'
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
+import logo from '/public/images/mktpl vault.png';
 
 export default function NavBar({user, updateUser}) {
 
@@ -10,12 +12,21 @@ export default function NavBar({user, updateUser}) {
   }
 
   return (
-    <nav>
-      <Link to="/cids">Stored CIDs</Link>
-      &nbsp; | &nbsp;
-      <Link to="/cids/new">Add CID</Link>
-      <h2>Welcome, {user.name}</h2>
-      <Link to='' onClick={handleLogOut}>Log Out</Link>
+    <nav class='flex-container'>
+      <div class='logo'>
+        <Link to="/">
+          <img src={logo} alt='Logo' />
+        </Link>
+      </div>
+      <div class='navbar-links'>
+        <Link className='text-blue-500' to="/cids">Stored CIDs</Link>
+        &nbsp; | &nbsp;
+        <Link to="/cids/new">Add CID</Link>
+      </div>
+      <div class='user-info'>
+        <h2>Welcome, {user.name}</h2>
+        <Link to='' onClick={handleLogOut}>Log Out</Link>
+      </div>
     </nav>
   )
 }

@@ -1,0 +1,76 @@
+div.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+img {
+    height: 88%;
+    width: 88%;
+    display: block;
+}
+
+.app-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+}
+
+.forms {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.center-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    align-self: center;
+}
+
+@media (max-width: 850px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .container-left {
+        align-items: center;
+        text-align: center;
+    }
+    img {
+        width: 40%;
+        height: 40%;
+    }
+    p {
+        text-align: center;
+    }
+    .forms {
+        margin-top: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+}

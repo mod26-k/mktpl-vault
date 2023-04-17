@@ -4,4 +4,4 @@ const cidsCtrl = require('../../controllers/api/cids')
 
 router.post('/cids', cidsCtrl.addToTable)
 
-module.exorts = router;
+module.exports = router;
