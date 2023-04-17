@@ -12,7 +12,7 @@ export default function AddCidForm() {
     }
   return (
     <>
-        <form method='POST' action='/cids'>
+        <form>
             <label htmlFor='title'>title:</label>
             <input type='text' id='title' name='title'/>
             <label htmlFor='file-type'>file type:</label>

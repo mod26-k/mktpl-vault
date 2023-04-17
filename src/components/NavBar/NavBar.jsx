@@ -19,7 +19,7 @@ export default function NavBar({user, updateUser}) {
         </Link>
       </div>
       <div class='navbar-links'>
-        <Link className='text-blue-500' to="/cids">Stored CIDs</Link>
+        <Link to="/cids">Stored CIDs</Link>
         &nbsp; | &nbsp;
         <Link to="/cids/new">Add CID</Link>
       </div>
