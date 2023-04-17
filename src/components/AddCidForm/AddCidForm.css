@@ -1,0 +1,25 @@
+h1 {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+form {
+    margin: auto;
+    max-width: 50%;
+}
+
+label {
+    font-size: 0.8em;
+    color: #191919;
+}
+
+select {
+    font-size: 0.8em;
+    color: #191919;
+
+}
+
+input {
+    font-size: 0.8em;
+    color: #191919;
+}

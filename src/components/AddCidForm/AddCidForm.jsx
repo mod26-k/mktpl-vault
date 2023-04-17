@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './AddCidForm.css'
 
 export default function AddCidForm() {
   const [newCid, setNewCid] = useState({
@@ -19,7 +20,8 @@ export default function AddCidForm() {
   }
   
   return (
-    <>
+    <div class='form'>
+      <h1>Add Cid</h1>
         <form onSubmit={handleSubmit}>
             <label>title:</label>
             <input 
@@ -52,6 +54,6 @@ export default function AddCidForm() {
             {/* add function to the onClick */}
             {/* should add the values to table in all cid page */}
         </form>
-    </>
+    </div>
   )
 }

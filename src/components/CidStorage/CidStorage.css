@@ -1,0 +1,18 @@
+h1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    table-layout: fixed;
+    /* border: 2px solid black; */
+}
+
+th {
+    border: 2px solid black;
+
+}

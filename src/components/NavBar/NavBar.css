@@ -2,14 +2,8 @@ body {
     margin-top: 0;
 }
 
-nav.flex-container {
+.flex-container {
     display: flex
-}
-
-.navbar {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo {
@@ -44,9 +38,10 @@ nav.flex-container {
 }
 
 @media (max-width: 850px) {
-    nav.flex-container {
+    .flex-container {
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     img {

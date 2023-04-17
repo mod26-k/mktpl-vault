@@ -3,7 +3,7 @@ import './HomePage.css'
 
 export default function HomePage() {
   return (
-    <div class='flex-container'>
+    <div class='about'>
         <h1>
             ABOUT
         </h1>

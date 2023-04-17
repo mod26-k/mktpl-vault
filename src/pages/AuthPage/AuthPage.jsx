@@ -16,7 +16,7 @@ return (
   <div class='center-button'>
     <div class='flex-container'>
       <div class='container-left'>
-        <img src={logo} alt='Logo' />
+        <img class='logo-img' src={logo} alt='Logo' />
           <div class='app-info'>
             <h4>
               The secure storage solution for your decentralized assets. Store and manage all your CIDs in one place with our user-friendly platform.
