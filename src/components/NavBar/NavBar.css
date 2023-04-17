@@ -28,6 +28,10 @@ body {
     align-items: center;
 }
 
+span {
+    font-size: 0.8rem;
+}
+
 .user-info {
     display: flex;
     flex-direction: column;

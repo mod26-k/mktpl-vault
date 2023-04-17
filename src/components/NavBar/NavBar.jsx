@@ -25,7 +25,10 @@ export default function NavBar({user, updateUser}) {
       </div>
       <div class='user-info'>
         <h2>Welcome, {user.name}</h2>
-        <Link to='' onClick={handleLogOut}>Log Out</Link>
+        <span>
+          <Link to='' onClick={handleLogOut}>Log Out
+          </Link>
+        </span>
       </div>
     </nav>
   )
