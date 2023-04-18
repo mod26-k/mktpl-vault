@@ -1,3 +1,7 @@
+.container {
+
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -5,14 +9,20 @@ h1 {
 }
 
 table {
-    display: flex;
-    justify-content: center;
     width: 100%;
     table-layout: fixed;
-    /* border: 2px solid black; */
+    border: 2px solid;
 }
 
 th {
-    border: 2px solid black;
+    border: 2px solid grey;
+}
 
+td {
+    color: #191919;
+    border: 2px solid grey;
+}
+
+tr:nth-child(even) {
+    background: #EEEEEE;
 }
