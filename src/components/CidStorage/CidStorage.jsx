@@ -1,6 +1,5 @@
 import React from 'react'
 import './CidStorage.css'
-// import cid from '../../../models/cid'
 
 export default function CidStorage() {
   return (
@@ -12,11 +11,11 @@ export default function CidStorage() {
                 <th>file type</th>
                 <th>cid</th>
             </tr>
-            {/* <tr>
-                <td>{cid.title}</td>
+            <tr>
+                {/* <td>{cid.title}</td>
                 <td>{cid.fileType}</td>
-                <td>{cid.cid}</td>
-            </tr> */}
+                <td>{cid.cid}</td> */}
+            </tr>
         </table>
     </div>
   )

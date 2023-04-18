@@ -10,6 +10,14 @@ export default function AddCidForm() {
 
   const [error, setError] = useState('');
 
+  function handleChange(evt) {
+    const addedCid = {...newCid, 
+      [evt.target.title]: evt.target.value, 
+      [evt.target.fileType]: evt.target.value, 
+      [evt.target.cid]: evt.target.value}
+    setNewCid(addedCid)
+  }
+
   async function handleSubmit(newCid) {
     evt.preventDefault();
 
@@ -28,7 +36,7 @@ export default function AddCidForm() {
               type='text' 
               name='title' 
               value={newCid.title} 
-              onChange={(evt) => setNewCid(evt.target.value)} 
+              onChange={handleChange} 
               required
             />
             <label>file type:</label>
@@ -36,7 +44,7 @@ export default function AddCidForm() {
               id='file-type' 
               name='file-type' 
               value={newCid.fileType}
-              onChange={(evt) => setNewCid(evt.target.value)} 
+              onChange={handleChange} 
               required
             >
                 <option value='img'>img</option>
@@ -47,12 +55,10 @@ export default function AddCidForm() {
             <input type='text' 
               name='cid' 
               value={newCid.cid}
-              onChange={(evt) => setNewCid(evt.target.value)} 
+              onChange={handleChange} 
               required
             />
             <button type='submit'>Add</button>
-            {/* add function to the onClick */}
-            {/* should add the values to table in all cid page */}
         </form>
     </div>
   )
