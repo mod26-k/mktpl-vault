@@ -2,59 +2,60 @@ import React, {useState} from 'react'
 import './AddCidForm.css'
 
 export default function AddCidForm() {
-  const [newCid, setNewCid] = useState({
+  const [data, setData] = useState({
     title: '',
     fileType: '',
     cid: '',
   });
 
+  const [newData, setNewData] = useState('');
+
   const [error, setError] = useState('');
 
   function handleChange(evt) {
-    const addedCid = {...newCid, 
-      [evt.target.title]: evt.target.value, 
-      [evt.target.fileType]: evt.target.value, 
-      [evt.target.cid]: evt.target.value}
-    setNewCid(addedCid)
+    const updatedState = {...newData, 
+      [evt.target.name]: evt.target.value}
+    setNewData(updatedState)
   }
 
-  async function handleSubmit(newCid) {
-    evt.preventDefault();
+  function addData() {
+    setData([...data, newData])
+  }
 
-    setCid([...cids, newCid]);
-    // } catch {
-    //   setError('something missing?')
-    // }
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    addData(newData)
+    setNewData('');
   }
   
   return (
-    <div class='form'>
+    <div className='form'>
       <h1>Add Cid</h1>
         <form onSubmit={handleSubmit}>
             <label>title:</label>
             <input 
               type='text' 
               name='title' 
-              value={newCid.title} 
+              value={newData.title} 
               onChange={handleChange} 
               required
             />
             <label>file type:</label>
             <select 
               id='file-type' 
-              name='file-type' 
-              value={newCid.fileType}
+              name='fileType' 
+              value={newData.fileType}
               onChange={handleChange} 
               required
             >
                 <option value='img'>img</option>
-                <option value='txt-file'>.txt file</option>
+                <option value='txt'>.txt file</option>
                 <option value='json'>json</option>
             </select>
             <label>cid:</label>
             <input type='text' 
               name='cid' 
-              value={newCid.cid}
+              value={newData.cid}
               onChange={handleChange} 
               required
             />

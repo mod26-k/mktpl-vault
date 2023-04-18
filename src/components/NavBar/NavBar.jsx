@@ -12,18 +12,18 @@ export default function NavBar({user, updateUser}) {
   }
 
   return (
-    <nav class='flex-container'>
-      <div class='logo'>
+    <nav className='flex-container'>
+      <div className='logo'>
         <Link to="/">
           <img src={logo} alt='Logo' />
         </Link>
       </div>
-      <div class='navbar-links'>
+      <div className='navbar-links'>
         <Link to="/cids">Stored CIDs</Link>
         &nbsp; | &nbsp;
         <Link to="/cids/new">Add CID</Link>
       </div>
-      <div class='user-info'>
+      <div className='user-info'>
         <h2>Welcome, {user.name}</h2>
         <span>
           <Link to='' onClick={handleLogOut}>Log Out
