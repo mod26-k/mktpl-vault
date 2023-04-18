@@ -41,7 +41,7 @@ export default function AddCidForm() {
               required
             />
             <label>file type:</label>
-            <select 
+            <select className='select'
               id='file-type' 
               name='fileType' 
               value={newData.fileType}

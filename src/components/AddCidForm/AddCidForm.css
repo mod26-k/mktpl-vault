@@ -13,10 +13,9 @@ label {
     color: #191919;
 }
 
-select {
+.select {
     font-size: 0.8em;
     color: #191919;
-
 }
 
 input {
