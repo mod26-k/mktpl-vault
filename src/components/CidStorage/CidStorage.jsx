@@ -1,9 +1,33 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import './CidStorage.css'
+// import * as cidAPI from '../../utilities/cids-api';
+// import * as Cid from '../../../models/cid'
 
 export default function CidStorage() {
+
+    const [data, setData] = useState([]);
+
+    async function getData() {
+        const allData = await cidAPI.getAll()
+         return allData.map(data => {
+            return data
+         })
+    }
+
+    getData()
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await getData()
+            setData(response)
+        }
+        fetchData()
+    }, [])
+
   return (
     <div className='container'>
+        {/* {console.log(Cid)} */}
         <h1>Cid Storage</h1>
         <table>
             <thead>
@@ -14,21 +38,13 @@ export default function CidStorage() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    {/* <td>{cid.title}</td>
-                    <td>{cid.fileType}</td>
-                    <td>{cid.cid}</td> */}
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
+                {Cid.map((data) => (
+                    <tr key={data.id}>
+                        <td>{data.title}</td>
+                        <td>{data.fileType}</td>
+                        <td>{data.cid}</td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     </div>

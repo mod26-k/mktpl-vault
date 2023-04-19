@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import AddCidPage from '../AddCid/AddCidPage'
 import AllCidPage from '../AllCid/AllCidPage'
@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar'
 import { getUser } from '../../utilities/users-service';
 import "tailwindcss/tailwind.css"
+import { connect } from '../../../ipfs'
 
 export default function App() {
 
@@ -17,6 +18,10 @@ export default function App() {
     setUser(userState)
   }
 
+    useEffect(() => {
+      connect()
+    }, [])
+    
   return (
     <main className="App">
 

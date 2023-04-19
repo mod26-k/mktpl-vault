@@ -21,3 +21,7 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
   if (res.ok) return res.json();
   throw new Error('Bad Request');
 }
+
+// export default async function cidSendRequest(method = 'POST') {
+
+// }

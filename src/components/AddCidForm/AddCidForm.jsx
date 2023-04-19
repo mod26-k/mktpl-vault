@@ -1,31 +1,35 @@
 import React, {useState} from 'react'
 import './AddCidForm.css'
+import * as cidAPI from '../../utilities/cids-api';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function AddCidForm() {
   const [data, setData] = useState({
     title: '',
-    fileType: '',
+    fileType: 'img',
     cid: '',
   });
 
-  const [newData, setNewData] = useState('');
-
   const [error, setError] = useState('');
 
+  const navigate = useNavigate();
+
   function handleChange(evt) {
-    const updatedState = {...newData, 
+    const updatedState = {...data,
       [evt.target.name]: evt.target.value}
-    setNewData(updatedState)
+    setData(updatedState)
   }
 
-  function addData() {
-    setData([...data, newData])
-  }
-
-  function handleSubmit(evt) {
+  async function handleSubmit(evt) {
     evt.preventDefault();
-    addData(newData)
-    setNewData('');
+    try {
+      const newData = await cidAPI.submit(data)
+      navigate('/cids')
+    }
+    catch {
+      setError('Request could not be completed - Please try again');
+    }
   }
   
   return (
@@ -36,7 +40,7 @@ export default function AddCidForm() {
             <input 
               type='text' 
               name='title' 
-              value={newData.title} 
+              value={data.title} 
               onChange={handleChange} 
               required
             />
@@ -44,7 +48,7 @@ export default function AddCidForm() {
             <select className='select'
               id='file-type' 
               name='fileType' 
-              value={newData.fileType}
+              value={data.fileType}
               onChange={handleChange} 
               required
             >
@@ -55,7 +59,7 @@ export default function AddCidForm() {
             <label>cid:</label>
             <input type='text' 
               name='cid' 
-              value={newData.cid}
+              value={data.cid}
               onChange={handleChange} 
               required
             />

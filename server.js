@@ -15,6 +15,12 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/cids', require('./routes/api/cids'));
 
+// Error handler to check if route exists
+app.use(function (req, res) {
+  console.log(`route: ${req.path} does not exist`);
+  res.status(404, "route does not exist");
+});
+
 //catch all
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));

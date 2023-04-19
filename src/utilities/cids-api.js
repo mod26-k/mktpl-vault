@@ -1,6 +1,11 @@
-//export service functions here?
-
-// export function checkToken() {
-//     return sendRequest(`${BASE_URL}/check-token`);
-//   }
+import sendRequest from "./send-request";
+const BASE_URL = '/api/cids'
   
+
+export function submit(cidData){
+    return sendRequest(BASE_URL, 'POST', cidData)
+  }
+
+export function getAll(cidData){
+    return sendRequest(BASE_URL, 'GET', cidData)
+}
