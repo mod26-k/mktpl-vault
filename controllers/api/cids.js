@@ -1,10 +1,12 @@
 const Cid = require('../../models/cid');
+import { useNavigate } from 'react-router-dom';
 
 module.exports = {
     index,
     addToTable,
-    // editCid,
-    // deleteCid
+    editData,
+    updateData,
+    // deleteData
 }
 
 async function index(req, res) {
@@ -22,4 +24,13 @@ function addToTable(req, res) {
     res.json(newCid)
 }
 
-// function editCid()
+async function editData(req, res) {
+    const selectedData = await Cid.findById(req.params.id)
+    //navigate to edit page?
+    res.json(selectedData)
+}
+
+async function updateData(req, res) {
+    const data = await Cid.findById(req.params.id)
+
+}
