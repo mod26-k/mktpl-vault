@@ -3,7 +3,7 @@ import './HomePage.css'
 
 export default function HomePage() {
   return (
-    <div class='about'>
+    <div className='about'>
         <h1>
             ABOUT
         </h1>

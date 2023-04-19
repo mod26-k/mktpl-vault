@@ -14,9 +14,18 @@ th {
     border: 2px solid grey;
 }
 
+.options {
+    border: none;
+}
+
+button {
+    font-size: small !important;
+}
+
 td {
     color: #191919;
     border: 2px solid grey;
+    word-wrap: break-word;
 }
 
 tr:nth-child(even) {

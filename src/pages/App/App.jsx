@@ -4,11 +4,12 @@ import AddCidPage from '../AddCid/AddCidPage'
 import AllCidPage from '../AllCid/AllCidPage'
 import AuthPage from '../AuthPage/AuthPage'
 import HomePage from '../HomePage/HomePage'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar'
 import { getUser } from '../../utilities/users-service';
 import "tailwindcss/tailwind.css"
 // import { connect } from '../../../ipfs'
+import EditCidPage from '../EditCid/EditCidPage'
 
 export default function App() {
 
@@ -32,6 +33,8 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/cids" element={<AllCidPage />} />
             <Route path="/cids/new" element={<AddCidPage />} />
+            <Route path="/edit" element={<AddCidPage />} />
+            <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </>
         :
