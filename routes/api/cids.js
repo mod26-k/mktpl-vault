@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const cidsCtrl = require('../../controllers/api/cids.js')
+// const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 router.get('/', cidsCtrl.index)
 router.post('/', cidsCtrl.addToTable)

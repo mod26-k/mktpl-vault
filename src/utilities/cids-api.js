@@ -9,3 +9,7 @@ export function submit(cidData){
 export function getAll(cidData){
     return sendRequest(BASE_URL, 'GET', cidData)
 }
+
+export function update(cidData){
+    return sendRequest(BASE_URL, 'PUT', cidData)
+}

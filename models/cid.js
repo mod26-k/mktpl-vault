@@ -9,6 +9,11 @@ const cidSchema = new Schema({
         required: true
     },
     cid: {type: String, required: true},
+    // creator: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required: true
+    // }
 })
 
 module.exports = mongoose.model('Cid', cidSchema);

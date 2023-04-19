@@ -17,7 +17,11 @@ const userSchema = new Schema({
     trim: true,
     minLength: 3,
     required: true
-  }
+  },
+//   uploads: [{
+//     type: Schema.Types.ObjectId,
+//     ref: 'Cid'
+//   }]
 }, {
   timestamps: true,
   toJSON: {

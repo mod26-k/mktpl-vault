@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 //routes
+// const ensureLoggedIn = require('./config/ensureLoggedIn')
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/cids', require('./routes/api/cids'));
 

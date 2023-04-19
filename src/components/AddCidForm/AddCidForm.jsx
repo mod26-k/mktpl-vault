@@ -9,6 +9,7 @@ export default function AddCidForm() {
     title: '',
     fileType: 'img',
     cid: '',
+    // creator: {req.user._id}
   });
 
   const [error, setError] = useState('');

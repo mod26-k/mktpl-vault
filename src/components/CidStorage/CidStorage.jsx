@@ -4,7 +4,7 @@ import './CidStorage.css'
 import * as cidAPI from '../../utilities/cids-api';
 import { useNavigate } from 'react-router-dom';
 
-export default function CidStorage() {
+export default function CidStorage( {setToEditData} ) {
 
     const [data, setData] = useState([]);
     const navigate = useNavigate();
@@ -18,10 +18,11 @@ export default function CidStorage() {
         fetchData();
         }, []);
 
-    async function handleEdit(evt) {
-        evt.preventDefault();
+    async function handleEdit(evt, data) {
         try {
-            navigate('/edit/:id')
+            setToEditData(data)
+            console.log(data)
+            navigate('/edit')
         } catch {
             setError('Request could not be completed - Please try again');
         }
@@ -54,9 +55,17 @@ export default function CidStorage() {
                         <td>{data.fileType}</td>
                         <td>{data.cid}</td>
                         <td className='options'>
-                            <button 
+                            {/* {if (user?._id.equals(item.creator)){ */}
+                            {/* {if {req.user) {
+                                return 
+                                <button 
                                 type='button'
                                 onClick={handleEdit}
+                            }}}
+                         */}
+                            <button 
+                                type='button'
+                                onClick={(evt) => handleEdit(evt, data)}
                             >
                                 Edit
                             </button>
@@ -68,7 +77,7 @@ export default function CidStorage() {
                             </button>
                         </td>
                     </tr>
-                     ))}
+                ))}
             </tbody>
         </table>
     </div>
