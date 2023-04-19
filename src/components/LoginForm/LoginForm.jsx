@@ -9,10 +9,6 @@ export default function LoginForm({ setUser }) {
     password: ''
   });
   const [error, setError] = useState('');
-  // const [visibleLog, setVisibleLog] = useState('');
-  // const [visibleSign, setVisibleSign] = useState('');
-
-  // function toggle
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
