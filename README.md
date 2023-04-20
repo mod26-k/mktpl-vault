@@ -1,13 +1,29 @@
-![](src/photos/mktpl%20vault%20copy.png)
+![](src/photos/readmeheader.png)
 
-# [LIVE DEMO HERE](https://mod26-k.github.io/spaceMan/)
+# [LIVE DEMO HERE](https://mktpl-vault.herokuapp.com/)
 
-![](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)
-![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
+[![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
+[![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://https://npmjs.com/)
+![Terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
+![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
+![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+![Zoom](https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
 
 # Introduction
-Space Man is a word-guessing game where the computer generates a random word within a specific theme, and the user has several attempts to guess the correct letters to reveal the word. If the user uses all attempts and does not guess the word correctly, they lose. If they do, they win.
+
 
 ## How It Works
 ![](/photos/gamepage.png)
@@ -18,12 +34,6 @@ The game informs the player of how many letters are in the generated word and di
 
 ![](/photos/youwin.png)
 If the user guesses the word correctly, they win the game. If they don't guess the word correctly, and they've used all their guesses, they lose.
-
-# Technologies Used:
-- HTML
-- CSS
-- Javascript
-- VSCode
 
 # Code I Had Trouble With
 ```
