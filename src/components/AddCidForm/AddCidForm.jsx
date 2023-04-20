@@ -54,7 +54,7 @@ export default function AddCidForm() {
               required
             >
                 <option value='img'>img</option>
-                <option value='txt'>.txt file</option>
+                <option value='txt'>txt</option>
                 <option value='json'>json</option>
             </select>
             <label>cid:</label>

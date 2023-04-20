@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function EditCidForm({toEditData}) {
     const [selectedData, setSelectedData] = useState({
+        _id: toEditData._id,
         title: toEditData.title,
         fileType: toEditData.fileType,
         cid: toEditData.cid,
@@ -23,7 +24,7 @@ export default function EditCidForm({toEditData}) {
       async function handleSubmit(evt) {
         evt.preventDefault();
         try {
-          const newData = await cidAPI.update(toEditData.id, selectedData)
+          const newData = await cidAPI.update(selectedData)
           navigate('/cids')
         }
         catch {
@@ -50,7 +51,7 @@ export default function EditCidForm({toEditData}) {
               required
             >
                 <option value='img'>img</option>
-                <option value='txt'>.txt file</option>
+                <option value='txt'>txt</option>
                 <option value='json'>json</option>
             </select>
             <label>cid:</label>

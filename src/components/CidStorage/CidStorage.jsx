@@ -8,11 +8,12 @@ export default function CidStorage( {setToEditData} ) {
 
     const [data, setData] = useState([]);
     const navigate = useNavigate();
+    const [error, setError] = useState('');
+
 
     useEffect(() => {
         async function fetchData() {
         const response = await cidAPI.getAll();
-        console.log(response)
         setData(response);
         }
         fetchData();
@@ -21,21 +22,22 @@ export default function CidStorage( {setToEditData} ) {
     async function handleEdit(evt, data) {
         try {
             setToEditData(data)
-            console.log(data)
             navigate('/edit')
         } catch {
             setError('Request could not be completed - Please try again');
         }
     }
     
-    // async function handleDelete(evt) {
-    //     evt.preventDefault();
-    //     try {
-    //         {cidCtrl.deleteData}
-    //     } catch {
-    //         setError('Request could not be completed - Please try again');
-    //     }
-    // }
+    async function handleDelete(evt, _id) {
+       try {
+            await cidAPI.deleteData(_id);
+            const updatedData = await cidAPI.getAll();
+            console.log(updatedData)
+            setData(updatedData);
+       } catch (error) {
+            setError('Request could not be completed - Please try again')
+       }
+    }
 
   return (
     <div className='container'>
@@ -71,7 +73,7 @@ export default function CidStorage( {setToEditData} ) {
                             </button>
                             <button 
                                 type='button'
-                                // onClick={handleDelete}
+                                onClick={(evt) => handleDelete(evt, data._id)}
                             >
                                 Delete
                             </button>

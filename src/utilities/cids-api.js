@@ -13,3 +13,7 @@ export function getAll(cidData){
 export function update(cidData){
     return sendRequest(BASE_URL, 'PUT', cidData)
 }
+
+export function deleteData(cidData){
+    return sendRequest(`${BASE_URL}/${cidData}`, 'DELETE')
+}

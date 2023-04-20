@@ -29,19 +29,20 @@ async function editData(req, res) {
 }
 
 async function updateData(req, res) {
-    const data = await Cid.findById(req.params.id)
-    data.save();
-    res.json(data)
+    const data = await Cid.findById(req.body._id)
+        data.title = req.body.title
+        data.fileType = req.body.fileType
+        data.cid = req.body.cid
+        await data.save();
+        res.json(data)
 }
 
 async function deleteData(req, res) {
+    console.log('this is the bodyid', req.params.id)
     try {
-        const selectedData = await Cid.findById(req.params.id)
-        console.log(selectedData)
-        selectedData.Cid.remove(req.params.id)
-        await selectedData.save()
-        await Cid.deleteOne(req.params.id)
+        await Cid.findByIdAndDelete(req.params.id)
+        res.status(200).json('successfully deleted')
     } catch (error) {
-        res.status(204).json(error)
+        res.status('204').json(error)
     }
 }
