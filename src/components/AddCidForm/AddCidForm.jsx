@@ -10,7 +10,7 @@ export default function AddCidForm( {user} ) {
     title: '',
     fileType: 'img',
     cid: '',
-    uploadedBy: user,
+    // uploadedBy: user,
   });
 
   const [error, setError] = useState('');
