@@ -8,7 +8,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar'
 import { getUser } from '../../utilities/users-service';
 import "tailwindcss/tailwind.css"
-// import { connect } from '../../../ipfs'
+import { connect } from '../../../ipfs'
 import EditCidForm from '../../components/EditCidForm/EditCidForm'
 
 export default function App() {
@@ -21,9 +21,9 @@ export default function App() {
     setUser(userState)
   }
 
-  // useEffect(() => {
-  //   connect()
-  // }, [])
+  useEffect(() => {
+    connect()
+  }, [])
 
   return (
     <main className="App">
