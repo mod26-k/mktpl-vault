@@ -2,11 +2,6 @@
 
 # [LIVE DEMO HERE](https://mktpl-vault.herokuapp.com/)
 
-[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-[![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
-[![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://https://npmjs.com/)
-![Terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -20,10 +15,15 @@
 ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
 ![Zoom](https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
+[![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
+[![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://https://npmjs.com/)
+![Terminal](https://badgen.net/badge/icon/terminal?icon=terminal&label)
 
 
 # Introduction
-
+mktpl-vault is a data storage site that allows you to store all your cids in one place.
 
 ## How It Works
 ![](/photos/gamepage.png)
@@ -34,6 +34,11 @@ The game informs the player of how many letters are in the generated word and di
 
 ![](/photos/youwin.png)
 If the user guesses the word correctly, they win the game. If they don't guess the word correctly, and they've used all their guesses, they lose.
+
+# Technologies Used
+[Trello](https://trello.com/invite/b/88WmbWGW/ATTIc92f271f460a07db62b2b668e3fcfe0f30317340/project-3)
+[ERD](https://lucid.app/lucidchart/10a3e830-b08e-4b32-b93c-a6b339b8420f/edit?viewport_loc=-24%2C-86%2C1045%2C526%2C0_0&invitationId=inv_16aaec1a-50ff-426c-8605-3d9ec1b9929e)
+[WIREFRAME](https://whimsical.com/project-3-XjEJ9uwP75FzJgfjL51t7)
 
 # Code I Had Trouble With
 ```
@@ -51,12 +56,8 @@ This code took me several hours over the course of days to solve because I had t
 2. I had declared variables within a function and I had trouble figuring out how to reference them. I was eventually able to write the function without referencing them.
 There was a lot of researching, trouble shooting, testing, and console logging that took up a large chunk of time.
 
-## Some Immediate Changes I'd Like To Make:
-- To add more categories.
-- To fix the event-listener to only account for clicks on the letter buttons, not in the entire fieldset.
-- To add CSS.
-- To be able to start a new game without refreshing the page. Ideally, by selecting a new category at the end of the game.
-- To fix the category button so that it does not continuously generate new words without clearing the original array.
+## Getting Started
+- link to trello and erd and wireframe
 
 ## Some Features I Would Like To Add: 
 - To change the guess counter to only subtract guesses, if the player guessed incorrectly. It currently counts down regardless of if the guess is correct or not, which will create problems with larger words.
