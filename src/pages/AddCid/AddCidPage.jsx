@@ -1,11 +1,11 @@
 import React from 'react'
 import AddCidForm from '../../components/AddCidForm/AddCidForm'
 
-export default function AddCidPage( {user} ) {
+export default function AddCidPage() {
 
   return (
     <div>
-      <AddCidForm user={user} />
+      <AddCidForm />
     </div>
   )
 }

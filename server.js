@@ -9,12 +9,13 @@ const app = express();
 //middleware
 app.use(logger('dev'));
 app.use(express.json());
+app.use(require('./config/checkToken'));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 //routes
-// const ensureLoggedIn = require('./config/ensureLoggedIn')
+const ensureLoggedIn = require('./config/ensureLoggedIn')
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/cids', require('./routes/api/cids'));
+app.use('/api/cids', ensureLoggedIn, require('./routes/api/cids'));
 
 // Error handler to check if route exists
 app.use(function (req, res) {

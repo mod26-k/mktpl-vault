@@ -9,7 +9,6 @@ import NavBar from '../../components/NavBar/NavBar'
 import { getUser } from '../../utilities/users-service';
 import "tailwindcss/tailwind.css"
 // import { connect } from '../../../ipfs'
-// import EditCidPage from '../EditCid/EditCidPage'
 import EditCidForm from '../../components/EditCidForm/EditCidForm'
 
 export default function App() {
@@ -22,7 +21,9 @@ export default function App() {
     setUser(userState)
   }
 
-
+  // useEffect(() => {
+  //   connect()
+  // }, [])
 
   return (
     <main className="App">
@@ -33,7 +34,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cids" element={<AllCidPage setToEditData={setToEditData}/>} />
-            <Route path="/cids/new" element={<AddCidPage user={user} />} />
+            <Route path="/cids/new" element={<AddCidPage />} />
             <Route path="/edit" element={<EditCidForm toEditData={toEditData}/>} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>

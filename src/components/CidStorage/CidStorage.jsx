@@ -57,14 +57,6 @@ export default function CidStorage( {setToEditData} ) {
                         <td>{data.fileType}</td>
                         <td>{data.cid}</td>
                         <td className='options'>
-                            {/* {if (user?._id.equals(item.creator)){ */}
-                            {/* {if {req.user) {
-                                return 
-                                <button 
-                                type='button'
-                                onClick={handleEdit}
-                            }}}
-                         */}
                             <button 
                                 type='button'
                                 onClick={(evt) => handleEdit(evt, data)}

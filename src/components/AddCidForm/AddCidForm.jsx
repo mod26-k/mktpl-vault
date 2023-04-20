@@ -5,12 +5,11 @@ import { useNavigate } from 'react-router-dom';
 // import { getUser } from '../../utilities/users-service';
 
 
-export default function AddCidForm( {user} ) {
+export default function AddCidForm() {
   const [data, setData] = useState({
     title: '',
     fileType: 'img',
     cid: '',
-    // uploadedBy: user,
   });
 
   const [error, setError] = useState('');

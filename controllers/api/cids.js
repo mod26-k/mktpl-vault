@@ -9,16 +9,17 @@ module.exports = {
 }
 
 async function index(req, res) {
-    const storedData = await Cid.find({})
+    const storedData = await Cid.find({uploadedBy: req.user._id})
     res.json(storedData)
 }
 
 function addToTable(req, res) {
+    console.log(req.user)
     const newCid = new Cid({
         title: req.body.title,
         fileType: req.body.fileType,
         cid: req.body.cid,
-        // uploadedBy: req.body.uploadedBy
+        uploadedBy: req.user._id
     })
     newCid.save();
     res.json(newCid)
