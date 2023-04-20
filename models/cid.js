@@ -9,7 +9,7 @@ const cidSchema = new Schema({
         required: true
     },
     cid: {type: String, required: true},
-    creator: {
+    uploadedBy: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true

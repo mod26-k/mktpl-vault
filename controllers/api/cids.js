@@ -17,7 +17,8 @@ function addToTable(req, res) {
     const newCid = new Cid({
         title: req.body.title,
         fileType: req.body.fileType,
-        cid: req.body.cid
+        cid: req.body.cid,
+        // uploadedBy: req.body.uploadedBy
     })
     newCid.save();
     res.json(newCid)

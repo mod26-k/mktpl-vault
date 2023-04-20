@@ -2,14 +2,15 @@ import React, {useState} from 'react'
 import './AddCidForm.css'
 import * as cidAPI from '../../utilities/cids-api';
 import { useNavigate } from 'react-router-dom';
+// import { getUser } from '../../utilities/users-service';
 
 
-export default function AddCidForm() {
+export default function AddCidForm( {user} ) {
   const [data, setData] = useState({
     title: '',
     fileType: 'img',
     cid: '',
-    // creator: {req.user._id}
+    uploadedBy: user,
   });
 
   const [error, setError] = useState('');

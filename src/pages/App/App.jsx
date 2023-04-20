@@ -33,7 +33,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cids" element={<AllCidPage setToEditData={setToEditData}/>} />
-            <Route path="/cids/new" element={<AddCidPage />} />
+            <Route path="/cids/new" element={<AddCidPage user={user} />} />
             <Route path="/edit" element={<EditCidForm toEditData={toEditData}/>} />
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
