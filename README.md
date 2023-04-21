@@ -26,43 +26,30 @@
 mktpl-vault is a data storage site that allows you to store all your cids in one place.
 
 ## How It Works
-![](/photos/gamepage.png)
-The player starts the game by selecting a category, which generates a word within that category. The category button becomes disabled to prevent players from 
+![](src/photos/landing-page.png)
+The site is secured and only allows access to registered users. This landing page allows visitors to either log in or sign up to the site.
 
-![](/photos/wordgenerated.png)
-The game informs the player of how many letters are in the generated word and displays the blank spaces for each letter. There is a guess counter at the bottom that tells the player how many attempts at guessing a letter is remaining.
+![](src/photos/homepage.png)
+After getting access to the site, the homepage has the apps mission statement, as well as links to your stored database and to add new data, and the option to log out in the top right corner.
 
-![](/photos/youwin.png)
-If the user guesses the word correctly, they win the game. If they don't guess the word correctly, and they've used all their guesses, they lose.
+![](src/photos/stored-cids.png)
+The database only shows your added data and gives you the ability to update and delete your data. 
+
+![](src/photos/add-cid.png)
+The add cid page allows you to declare a title, filetype, along with your cid. Upon submission, the site redirects you back to your database.
 
 # Technologies Used
-[Trello](https://trello.com/invite/b/88WmbWGW/ATTIc92f271f460a07db62b2b668e3fcfe0f30317340/project-3)
-[ERD](https://lucid.app/lucidchart/10a3e830-b08e-4b32-b93c-a6b339b8420f/edit?viewport_loc=-24%2C-86%2C1045%2C526%2C0_0&invitationId=inv_16aaec1a-50ff-426c-8605-3d9ec1b9929e)
-[WIREFRAME](https://whimsical.com/project-3-XjEJ9uwP75FzJgfjL51t7)
-
-# Code I Had Trouble With
-```
-querySelectorAll(`.${guessedLetter}`)
-        genWordArr[0].forEach(function(letter) {
-            if (letter === guessedLetter) {
-                character.forEach(function(guess){
-                    guess.style.visibility = "visible"
-                })
-            }
-        })
-```
-This code took me several hours over the course of days to solve because I had to fix many things to make it work. For example:
-1. I had created an array within an array which affected the length and values of some variables I was referencing.
-2. I had declared variables within a function and I had trouble figuring out how to reference them. I was eventually able to write the function without referencing them.
-There was a lot of researching, trouble shooting, testing, and console logging that took up a large chunk of time.
+- MongoDB
+- Express
+- React
+- Node.js
+- Heroku
 
 ## Getting Started
-- link to trello and erd and wireframe
+- [Trello](https://trello.com/invite/b/88WmbWGW/ATTIc92f271f460a07db62b2b668e3fcfe0f30317340/project-3)
+- [ERD](https://lucid.app/lucidchart/10a3e830-b08e-4b32-b93c-a6b339b8420f/edit?viewport_loc=-24%2C-86%2C1045%2C526%2C0_0&invitationId=inv_16aaec1a-50ff-426c-8605-3d9ec1b9929e)
+- [WIREFRAME](https://whimsical.com/project-3-XjEJ9uwP75FzJgfjL51t7)
 
-## Some Features I Would Like To Add: 
-- To change the guess counter to only subtract guesses, if the player guessed incorrectly. It currently counts down regardless of if the guess is correct or not, which will create problems with larger words.
-- To add an all or nothing feature that allows the player to type in their guess of the entire word. If they guess the entire word, they win. If they get it wrong, game over.
-- To add a timer to prevent unreasonably long game times, but the timer should be able to be toggled on/off by the user.
-- To allow for multiple players. I'd like multiple players to be able to take turns guessing the generated word, and to be able to input their own word to have other players guess, rather than just the generated word.
-- To be able to keep score for all players.
-- To allow players to use their physical keyboard to input words or guesses.
+## Next Steps
+1. Resolve CSS inconsistencies between my local app and deployed app
+2. Implement an api that allows users to pin assets to IPFS directly from mktpl-vault and the generated CID is automatically populated into their database.
