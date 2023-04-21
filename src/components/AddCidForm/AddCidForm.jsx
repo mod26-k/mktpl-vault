@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import './AddCidForm.css'
 import * as cidAPI from '../../utilities/cids-api';
 import { useNavigate } from 'react-router-dom';
-// import { getUser } from '../../utilities/users-service';
 
 
 export default function AddCidForm() {

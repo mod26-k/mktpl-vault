@@ -3,7 +3,6 @@ import { signUp } from '../../utilities/users-service';
 
 export default class SignUpForm extends Component {
 
-  // state is always an object with a property for each "piece" of state
   state = {
     name: '',
     email: '',
@@ -15,8 +14,6 @@ export default class SignUpForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      // We don't want to send the 'error' or 'confirm' property,
-      //  so let's make a copy of the state object, then delete them
       const formData = {...this.state}
       delete formData.error;
       delete formData.confirm;
