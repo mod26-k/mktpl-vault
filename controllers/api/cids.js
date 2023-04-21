@@ -14,7 +14,6 @@ async function index(req, res) {
 }
 
 function addToTable(req, res) {
-    console.log(req.user)
     const newCid = new Cid({
         title: req.body.title,
         fileType: req.body.fileType,
@@ -40,7 +39,6 @@ async function updateData(req, res) {
 }
 
 async function deleteData(req, res) {
-    console.log('this is the bodyid', req.params.id)
     try {
         await Cid.findByIdAndDelete(req.params.id)
         res.status(200).json('successfully deleted')

@@ -32,7 +32,6 @@ export default function CidStorage( {setToEditData} ) {
        try {
             await cidAPI.deleteData(_id);
             const updatedData = await cidAPI.getAll();
-            console.log(updatedData)
             setData(updatedData);
        } catch (error) {
             setError('Request could not be completed - Please try again')
